@@ -7,7 +7,7 @@ const taskList = document.getElementById('task-list')
 
     function addTask(){
         console.log( 'll');
-        const taskText = taskInput.trim()
+        const taskText = taskInput.value.trim()
         
         if(taskText == ''){
             alert('enter a task')
@@ -17,9 +17,12 @@ const taskList = document.getElementById('task-list')
             const removeBtn = document.createElement('button')
             removeBtn.textContent = 'Remove'
             removeBtn.classList = 'remove-btn'
+            li.appendChild(removeBtn)
+            taskList.appendChild(li)
             removeBtn.onclick() = function(){
                 taskList.removeChild(li)
             }
+            taskInput.value = ''
         }
     }
     addButton.addEventListener('click',addTask())
