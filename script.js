@@ -5,8 +5,7 @@ const addButton = document.getElementById('add-task-btn')
 const taskInput = document.getElementById('task-input')
 const taskList = document.getElementById('task-list')
 
-    function addTask(){
-        console.log( 'll');
+function addTask(){
         const taskText = taskInput.value.trim()
         
         if(taskText == ''){
@@ -16,23 +15,21 @@ const taskList = document.getElementById('task-list')
             li.textContent = taskText;
             const removeBtn = document.createElement('button')
             removeBtn.textContent = 'Remove'
-            removeBtn.classList.add = 'remove-btn'
+            removeBtn.classList.add('remove-btn')
             li.appendChild(removeBtn)
             taskList.appendChild(li)
-            removeBtn.onclick() = function(){
+            taskInput.value = ''
+            removeBtn.onclick = function(){
                 taskList.removeChild(li)
             }
-            taskInput.value = ''
-        }
+        }    
+}
+addButton.addEventListener('click',addTask)
+taskInput.addEventListener('keypress',function (event){
+    if(event.key === 'Enter'){
+        addTask()
     }
-    addButton.addEventListener('click',addTask())
-    taskInput.addEventListener('keypress',function (event){
-        console.log(event,'kk');
-        
-        if(event.key === 'Enter'){
-            addTask()
-        }
-    })
+})
      
 // /////////////////
 
