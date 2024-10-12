@@ -16,7 +16,7 @@ const taskList = document.getElementById('task-list')
             li.textContent = taskText;
             const removeBtn = document.createElement('button')
             removeBtn.textContent = 'Remove'
-            removeBtn.classList = 'remove-btn'
+            removeBtn.classList.add = 'remove-btn'
             li.appendChild(removeBtn)
             taskList.appendChild(li)
             removeBtn.onclick() = function(){
