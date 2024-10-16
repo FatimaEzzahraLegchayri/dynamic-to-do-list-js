@@ -30,7 +30,7 @@ input.addEventListener('keypress',function (event){
 
 function display(){
     if(arr.length > 0){
-        arr.forEach(element=>{
+        arr.forEach((element,index)=>{
            const li = document.createElement('li')
            const btn = document.createElement('button')
            btn.classList.add('remove-btn')
@@ -39,7 +39,7 @@ function display(){
            li.appendChild(btn)
            taskList.appendChild(li)
     
-           btn.onclick = function remove(index){
+           btn.onclick = function remove(){
             taskList.removeChild(li)
             arr.splice(index,1)
             localStorage.setItem('tasks',JSON.stringify(arr))
