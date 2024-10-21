@@ -53,3 +53,4 @@ function display(){
 
 taskInput.value.trim()", "taskText"]
 Remove
+taskInput.addEventListener
