@@ -50,3 +50,5 @@ function display(){
     }
 }
  
+
+taskInput.value.trim()", "taskText"]
